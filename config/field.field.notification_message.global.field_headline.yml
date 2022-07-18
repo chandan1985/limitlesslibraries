@@ -1,0 +1,21 @@
+uuid: d2573aa7-5e5a-43de-b03c-af1f9c4b0e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.notification_message.field_headline
+    - notification_message.type.global
+  module:
+    - text
+id: notification_message.global.field_headline
+field_name: field_headline
+entity_type: notification_message
+bundle: global
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,28 @@
+<?php
+function npl_redirects_schema(){
+    $schema['npl_redirects'] = array(
+        'fields' => array(
+            'hash_key'=> array(
+                'description' =>'Stores hash key values.',
+                'type' => 'char',
+                'length' => 64,
+                'not null' => TRUE,
+            ),
+            'redirect_url'=> array(
+                'type' =>'varchar',
+                'description' =>'Stores redirects URL.',
+                'length' => 500,
+                'not null' => TRUE,
+            ),
+            'target_url'=> array(
+                'type' =>'varchar',
+                'description' =>'Stores Targets URL.',
+                'length' => 500,
+                'not null' => TRUE,
+            ),         
+        ),
+        'primary key' => array('hash_key'),
+    );
+    return $schema;
+}
+?>

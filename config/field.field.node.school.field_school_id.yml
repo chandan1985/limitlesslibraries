@@ -1,0 +1,19 @@
+uuid: 573a2b10-c4ba-4d76-a579-8f123086683b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_id
+    - node.type.school
+id: node.school.field_school_id
+field_name: field_school_id
+entity_type: node
+bundle: school
+label: 'School ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

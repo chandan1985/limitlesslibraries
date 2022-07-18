@@ -1,0 +1,40 @@
+<?php
+
+    use Drupal\Core\Url;
+    use Drupal\redirect\Entity\Redirect;
+    use Drupal\Code\Database\Database;
+
+
+    /**
+     * Implements hook_preprocess_page
+     *
+     * @param $variables
+     */
+    function npl_redirects_preprocess_page(&$variables) {
+
+        // Getting current path from url
+        $current_uri = \Drupal::request()->getRequestUri();
+        $url_components = explode('/',$current_uri);
+
+        if($url_components[1] == 'nplredirect'){
+            $source_url = '/' . $url_components[2];
+            // Fetching redirect_url and target_url from database
+            $query = \Drupal::database();
+            $data = $query->select('npl_redirects','e')
+                    ->fields('e',['redirect_url' , 'target_url'])
+                    ->condition('redirect_url', $source_url, '=')
+                    ->execute()->fetchAll(\PDO::FETCH_OBJ);
+            // Redirect Urls
+            $redirect_url = $data[0]->redirect_url;
+            $target_url = $data[0]->target_url;
+            if($redirect_url && $target_url){
+                if($source_url == $redirect_url){
+                    drupal_flush_all_caches();
+                    $response = new Symfony\Component\HttpFoundation\RedirectResponse($target_url); //set url
+                    $response->send();
+                    return ;
+                }
+            }
+
+        }
+    }

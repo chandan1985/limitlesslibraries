@@ -1,0 +1,13 @@
+
+framework:
+  css:
+    theme:
+      css/style.css: {}
+      css/themes.css: {}
+      css/header.css: {}
+      css/footer.css: {}
+      css/ipad.css: {}
+      css/mobile.css: {}
+
+  js:
+    js/jquery/simple.js: {}

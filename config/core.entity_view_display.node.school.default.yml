@@ -1,0 +1,42 @@
+uuid: 9668fd18-4d8b-4907-91be-073382e18e2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.school.field_audience
+    - field.field.node.school.field_school_id
+    - field.field.node.school.field_school_ip
+    - node.type.school
+  module:
+    - user
+id: node.school.default
+targetEntityType: node
+bundle: school
+mode: default
+content:
+  field_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_school_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_school_ip:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true

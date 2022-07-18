@@ -1,0 +1,22 @@
+uuid: 237af15c-d0bd-4640-805f-19874a10e552
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - limitless
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: limitless_messages
+theme: limitless
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

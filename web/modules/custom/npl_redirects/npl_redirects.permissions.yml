@@ -1,0 +1,17 @@
+add npl_redirects:
+  title: 'Add NPL Redirects'
+  description: 'Allow to add the NPL Redirects'
+  restrict access: true
+
+edit npl_redirects:
+  title: 'Edit NPL Redirects'
+  description: 'Allow to edit the existing NPL Redirects'
+
+delete npl_redirects:
+  title: 'Delete NPL Redirects'
+  description: 'Allow to delete the existing NPL Redirects'
+  restrict access: true
+
+view npl_redirects:
+  title: 'Veiw NPL Redirects'
+  description: 'Allow to view the existing NPL Redirects'

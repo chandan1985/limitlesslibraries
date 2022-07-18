@@ -1,0 +1,8 @@
+uuid: ecc7233a-2000-4357-8be8-85bf14255b4b
+langcode: en
+status: true
+dependencies: {  }
+id: social_links
+label: 'Social Links'
+revision: 0
+description: ''

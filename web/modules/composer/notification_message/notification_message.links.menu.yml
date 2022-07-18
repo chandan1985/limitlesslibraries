@@ -1,0 +1,11 @@
+notification_message.content.collection:
+  title: Notification message
+  description: Manage the notification messages.
+  route_name: entity.notification_message.collection
+  parent: system.admin_content
+
+notification_message.type.collection:
+  title: Notification message types
+  description: Manage the notification message type configurations.
+  route_name: entity.notification_message_type.collection
+  parent: system.admin_structure

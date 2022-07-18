@@ -1,0 +1,19 @@
+uuid: 859b43a7-44fd-461b-a227-b8cd855caa3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_ip
+    - node.type.school
+id: node.school.field_school_ip
+field_name: field_school_ip
+entity_type: node
+bundle: school
+label: 'School IP Address'
+description: 'Must be a valid IP address like 96.4.9.18'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

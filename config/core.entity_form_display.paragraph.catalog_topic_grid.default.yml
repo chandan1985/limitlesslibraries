@@ -1,0 +1,45 @@
+uuid: 04d656e9-926c-4dcc-ba73-a9cde7668869
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.catalog_topic_grid.field_components
+    - field.field.paragraph.catalog_topic_grid.field_title
+    - paragraphs.paragraphs_type.catalog_topic_grid
+  module:
+    - paragraphs
+id: paragraph.catalog_topic_grid.default
+targetEntityType: paragraph
+bundle: catalog_topic_grid
+mode: default
+content:
+  field_components:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: catalog_topic_link
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

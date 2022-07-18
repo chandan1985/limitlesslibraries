@@ -1,0 +1,24 @@
+uuid: 8c5998d7-bcf0-4817-914e-aa88e2382aed
+langcode: en
+status: true
+dependencies:
+  module:
+    - notification_message
+  theme:
+    - bartik
+id: notificationmessages
+theme: bartik
+region: header
+weight: -4
+provider: null
+plugin: notification_message
+settings:
+  id: notification_message
+  label: 'Notification messages'
+  label_display: visible
+  provider: notification_message
+  notification_message:
+    type:
+      global: global
+    display_mode: default
+visibility: {  }

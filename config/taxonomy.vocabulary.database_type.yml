@@ -1,0 +1,8 @@
+uuid: e6ac676a-dba1-4a05-81fa-003741123048
+langcode: en
+status: true
+dependencies: {  }
+name: 'Database Type'
+vid: database_type
+description: 'Is it a research tool or a streaming site?'
+weight: 0

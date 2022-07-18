@@ -1,0 +1,54 @@
+uuid: db599277-7b18-4a0d-a0c7-fc816739cfeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.catalog_topic_link
+  module:
+    - entity_reference_revisions
+id: node.page.field_component
+field_name: field_component
+entity_type: node
+bundle: page
+label: 'Page Components'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      catalog_topic_link: catalog_topic_link
+      accordion_item: accordion_item
+    negate: 1
+    target_bundles_drag_drop:
+      accordion:
+        weight: -15
+        enabled: false
+      accordion_item:
+        weight: -10
+        enabled: true
+      block:
+        weight: -14
+        enabled: false
+      catalog_topic_grid:
+        weight: -13
+        enabled: false
+      catalog_topic_link:
+        weight: -11
+        enabled: true
+      database_feature_list_sortable:
+        weight: -12
+        enabled: false
+      text:
+        weight: -17
+        enabled: false
+      text_image:
+        weight: -16
+        enabled: false
+field_type: entity_reference_revisions

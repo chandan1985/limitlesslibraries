@@ -1,0 +1,17 @@
+{
+    "name": "drupal/notification_message",
+    "description": "Allow site admins to construct and broadcast notification messages.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Travis Tomka",
+            "email": "underoathosx@gmail.com"
+        }
+    ],
+    "homepage": "https://drupal.org/project/notification_message",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/notification_message"
+    },
+    "require": {}
+}

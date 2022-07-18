@@ -1,0 +1,22 @@
+uuid: 708bd77d-aacc-4124-9922-f82b31b07a09
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: database_pages
+label: 'Database Pages'
+type: 'canonical_entities:node'
+pattern: 'research/[node:title]'
+selection_criteria:
+  4858ca1d-b13a-439b-af74-9fbfee9d8f9c:
+    id: node_type
+    negate: false
+    uuid: 4858ca1d-b13a-439b-af74-9fbfee9d8f9c
+    context_mapping:
+      node: node
+    bundles:
+      database: database
+selection_logic: and
+weight: -5
+relationships: {  }

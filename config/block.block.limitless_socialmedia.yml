@@ -1,0 +1,21 @@
+uuid: f547e937-88c7-4a12-b85e-15501ab84a3b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - limitless
+id: limitless_socialmedia
+theme: limitless
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:90814c5e-fa56-4abf-bd7a-fe0dd4d8c901'
+settings:
+  id: 'block_content:90814c5e-fa56-4abf-bd7a-fe0dd4d8c901'
+  label: 'Social Media'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

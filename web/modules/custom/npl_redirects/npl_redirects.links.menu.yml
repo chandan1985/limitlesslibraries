@@ -1,0 +1,5 @@
+npl_redirects.admin:
+  title: 'NPL Redirects'
+  description: 'Module For User Registration Data'
+  parent: system.admin_structure
+  route_name: npl_redirects.getnpl_redirectsList

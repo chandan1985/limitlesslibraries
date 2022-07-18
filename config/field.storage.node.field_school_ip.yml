@@ -1,0 +1,21 @@
+uuid: 23fa784a-23f2-49fb-9b92-7958b4d2912e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_school_ip
+field_name: field_school_ip
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

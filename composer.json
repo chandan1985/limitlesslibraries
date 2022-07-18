@@ -1,0 +1,107 @@
+{
+    "name": "pantheon-upstreams/drupal-project",
+    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "path",
+            "url": "upstream-configuration"
+        }
+    ],
+    "require": {
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/admin_toolbar_tools": "^3.0",
+        "drupal/advagg": "^4.1",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/better_exposed_filters": "^5.0",
+        "drupal/block_field": "^1.0@RC",
+        "drupal/bootstrap": "^3.24",
+        "drupal/chosen": "^3.0",
+        "drupal/entity_browser": "^2.6",
+        "drupal/entity_display_mode": "1.x-dev",
+        "drupal/entity_extra_field": "^2.0@alpha",
+        "drupal/entity_extra_field_ui": "^2.0@alpha",
+        "drupal/field_group": "^3.2",
+        "drupal/fontawesome": "^2.22",
+        "drupal/google_tag": "^1.4",
+        "drupal/iframe": "^2.15",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/jquery_ui_accordion": "^1.1",
+        "drupal/media_entity_download": "^2.1",
+        "drupal/module_filter": "^3.2",
+        "drupal/newslettersignup": "^3.1",
+        "drupal/notification_message": "^1.0@RC",
+        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs_jquery_ui_accordion": "^1.4",
+        "drupal/pathauto": "^1.8",
+        "drupal/rebuild_cache_access": "^1.7",
+        "drupal/redirect": "^1.7",
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/simplenews": "^3.0@beta",
+        "drupal/social_media_links": "^2.8",
+        "drupal/stage_file_proxy": "^1.2",
+        "drupal/view_unpublished": "^1.0",
+        "drupal/views_autosubmit": "^1.4",
+        "drush/drush": "^10",
+        "pantheon-upstreams/upstream-configuration": "*"
+    },
+    "conflict": {
+            "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-types": [
+            "library"
+        ],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "harvesthq/chosen"
+              ],
+            "web/modules/composer/{$name}": ["type:drupal-module"],
+            "web/profiles/composer/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+        },
+        "patches": {
+          "drupal/paragraphs_jquery_ui_accordion": {
+            "Replacing the deprecated core/jquery.ui.accordion library with jquery_ui_accordion/accordion": "https://www.drupal.org/files/issues/2020-09-17/paragraphs_jquery_ui_accordion-accordion-library-3171508-2.patch"
+          },
+          "allow_chosen_mobile": {
+              "Patch for chosen mobile issue": "patches/allow_chosen_mobile"
+          }
+        },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "pantheon-systems/drupal-integrations"
+            ],
+            "locations": {
+                "web-root": "./web"
+            },
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/pantheon.upstream.yml": false,
+                "[project-root]/.gitattributes": false
+            }
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        }
+    }
+}

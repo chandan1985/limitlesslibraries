@@ -1,0 +1,43 @@
+{% if messages is not empty %}
+  {{ attach_library('npl/notification-box') }}
+
+  {% set toggle_display = toggle.display|default('active') %}
+  {% set toggle_default_state = toggle.default_state|default('closed') %}
+
+  {% set messages_classes = ['messages'] %}
+  {% set container_classes = ['notification-box'] %}
+
+  {% if toggle_display == 'active' %}
+    {% set container_classes = container_classes|merge(['display-toggle']) %}
+
+    {% if toggle_default_state == 'closed' %}
+      {% set messages_classes = messages_classes|merge(['messages--closed']) %}
+    {% endif %}
+  {% endif %}
+
+  <div class="{{ container_classes|join(' ') }}">
+    <button class="message-toggle"><span class="visually-hidden">{{ 'Toggle alerts'|t }}</span></button>
+
+    <div class="{{ messages_classes|join(' ') }}">
+      {% set count = messages|length %}
+
+      {% for index,message in messages %}
+        <div class="messages__message {{ count == index + 1 ? 'messages__message--last' : '' }}">
+          <div class="content">{{ message.content }}</div>
+          {% if message.read_more %}
+            <div class="read-more">
+              {% include "@atoms/01-links/link/00-link.twig" with {
+                "link_url": message.read_more_url,
+                "link_content": message.read_more_text|default('Read More'),
+                "link_modifiers": [
+                  'link-secondary'
+                ]
+              } %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+{% endif %}

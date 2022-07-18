@@ -1,0 +1,22 @@
+uuid: 99134c1f-6e63-4633-9ee3-9858cd5c3d6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - limitless
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: limitless_breadcrumbs
+theme: limitless
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

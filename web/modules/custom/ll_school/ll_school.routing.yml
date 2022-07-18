@@ -1,0 +1,6 @@
+ll_school.ll_schoolForm:
+  path: 'll-school/form'
+  defaults:
+   _form: '\Drupal\ll_school\Form\ll_schoolForm'
+  requirements:
+    _permission: 'access content'

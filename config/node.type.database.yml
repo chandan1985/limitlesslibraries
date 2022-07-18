@@ -1,0 +1,17 @@
+uuid: 87d01bf4-8960-455c-b59c-cb36a9fa2564
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Database
+type: database
+description: 'Use <em>Database</em> to create a new database listing.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,29 @@
+uuid: 9bfdb76e-3d40-4c2d-a74e-07f64a91483e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_database_reference
+    - node.type.database
+    - paragraphs.paragraphs_type.database_feature_list_sortable
+id: paragraph.database_feature_list_sortable.field_database_reference
+field_name: field_database_reference
+entity_type: paragraph
+bundle: database_feature_list_sortable
+label: 'Database Reference'
+description: 'Select up to 4 databases. Drag and drop to change the display order. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      database: database
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

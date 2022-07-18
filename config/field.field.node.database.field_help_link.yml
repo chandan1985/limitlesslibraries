@@ -1,0 +1,23 @@
+uuid: c882841c-c9e7-454a-8e6b-0f10747c1993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_help_link
+    - node.type.database
+  module:
+    - link
+id: node.database.field_help_link
+field_name: field_help_link
+entity_type: node
+bundle: database
+label: 'Help Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

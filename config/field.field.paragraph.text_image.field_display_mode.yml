@@ -1,0 +1,30 @@
+uuid: 9c314ec9-8f28-4302-974a-26f130f755fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_mode
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - entity_display_mode
+id: paragraph.text_image.field_display_mode
+field_name: field_display_mode
+entity_type: paragraph
+bundle: text_image
+label: 'Display Mode'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: image_text
+default_value_callback: ''
+settings:
+  display_type: view
+  display_mode:
+    image_text: image_text
+    text_image: text_image
+    default: 0
+    preview: 0
+    token: 0
+field_type: entity_display_mode

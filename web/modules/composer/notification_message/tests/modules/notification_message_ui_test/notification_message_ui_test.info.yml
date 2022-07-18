@@ -1,0 +1,11 @@
+name: 'Notification message test module'
+type: module
+description: 'Provides basic configuration needed to test the notification message UI.'
+package: Testing
+dependencies:
+  - notification_message:notification_message
+
+# Information added by Drupal.org packaging script on 2022-05-20
+version: '8.x-1.0-rc4'
+project: 'notification_message'
+datestamp: 1653019919

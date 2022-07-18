@@ -1,0 +1,6 @@
+notification_message_ui_test.test_page:
+  path: /notification-message-ui-test-page
+  defaults:
+    _controller: 'Drupal\notification_message_ui_test\Controller\TestPage::build'
+  requirements:
+    _access: 'TRUE'

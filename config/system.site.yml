@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 20551229-9c6d-4046-8446-ffa41e132fa7
+name: 'LL Drupal'
+mail: jenny.ellis@nashville.gov
+slogan: ''
+page:
+  403: ''
+  404: /node/65
+  front: /node/60
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

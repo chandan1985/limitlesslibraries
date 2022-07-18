@@ -1,0 +1,51 @@
+uuid: f89d06d7-a8f8-4e0f-80a9-445562f2be30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.school.field_audience
+    - field.field.node.school.field_school_id
+    - field.field.node.school.field_school_ip
+    - node.type.school
+id: node.school.default
+targetEntityType: node
+bundle: school
+mode: default
+content:
+  field_audience:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_school_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_ip:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

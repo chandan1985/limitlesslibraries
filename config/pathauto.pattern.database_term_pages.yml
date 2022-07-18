@@ -1,0 +1,24 @@
+uuid: ffd67d36-e5df-4545-8527-d6c1a48147d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: database_term_pages
+label: 'Database Term Pages'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'databases/[term:name]'
+selection_criteria:
+  af404b60-18a4-419a-8c25-5538e414fefc:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: af404b60-18a4-419a-8c25-5538e414fefc
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      audience: audience
+      category: category
+      media_type: media_type
+selection_logic: and
+weight: -5
+relationships: {  }

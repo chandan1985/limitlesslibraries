@@ -1,0 +1,12 @@
+uuid: 1430ae1a-42ec-4c9d-af5e-5ffff2d4e9fe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eX-oTkfC22a9nUWMWwBTqvtE41pOrs8UehYaBDWFc8s
+id: global
+label: 'Site Alert'
+help: ''
+description: 'Use <em>Site Alert</em> to broadcast site-wide notification messages, such as outages, closures, etc.'
+allow_condition: true
+condition_datatype: {  }

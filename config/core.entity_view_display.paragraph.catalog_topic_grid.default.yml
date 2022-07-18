@@ -1,0 +1,28 @@
+uuid: 9f879012-ed49-4672-9130-1017fa17c084
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.catalog_topic_grid.field_components
+    - field.field.paragraph.catalog_topic_grid.field_title
+    - paragraphs.paragraphs_type.catalog_topic_grid
+id: paragraph.catalog_topic_grid.default
+targetEntityType: paragraph
+bundle: catalog_topic_grid
+mode: default
+content:
+  catalog_topic_grid:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_components: true

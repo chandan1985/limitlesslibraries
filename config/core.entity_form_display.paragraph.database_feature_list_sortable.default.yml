@@ -1,0 +1,45 @@
+uuid: 62ffdad9-503b-4c27-b17a-2afe0e514586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.database_feature_list_sortable.field_database_reference
+    - field.field.paragraph.database_feature_list_sortable.field_link_url
+    - field.field.paragraph.database_feature_list_sortable.field_title
+    - paragraphs.paragraphs_type.database_feature_list_sortable
+  module:
+    - link
+id: paragraph.database_feature_list_sortable.default
+targetEntityType: paragraph
+bundle: database_feature_list_sortable
+mode: default
+content:
+  field_database_reference:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_url:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

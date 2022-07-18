@@ -1,0 +1,48 @@
+uuid: 8dc8458b-e7b5-4a5a-89bc-33aead08938e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.database
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.database.field_content
+field_name: field_content
+entity_type: node
+bundle: database
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+      accordion: accordion
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: true
+      accordion_item:
+        weight: 8
+        enabled: false
+      block:
+        weight: -8
+        enabled: false
+      catalog_widget:
+        weight: -7
+        enabled: false
+      database_feature_list_sortable:
+        weight: -6
+        enabled: false
+      text:
+        weight: -9
+        enabled: true
+field_type: entity_reference_revisions

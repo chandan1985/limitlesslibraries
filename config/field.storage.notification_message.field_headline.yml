@@ -1,0 +1,19 @@
+uuid: e9a097aa-a849-408d-842d-28a089b66779
+langcode: en
+status: true
+dependencies:
+  module:
+    - notification_message
+    - text
+id: notification_message.field_headline
+field_name: field_headline
+entity_type: notification_message
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

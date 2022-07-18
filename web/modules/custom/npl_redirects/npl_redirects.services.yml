@@ -1,0 +1,10 @@
+services:
+  npl_redirects.route_subscriber:
+    class: Drupal\npl_redirects\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  npl_redirects.access_checker:
+    class: Drupal\npl_redirects\Access\CustomAccessCheck
+    tags:
+      - { name: access_check }

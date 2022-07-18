@@ -1,0 +1,50 @@
+uuid: 8a666f9e-3eb6-4e59-b9fd-1e3e8a1708e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.notification_message.global.field_headline
+    - field.field.notification_message.global.field_read_more_url
+    - notification_message.type.global
+  module:
+    - datetime
+    - link
+    - text
+id: notification_message.global.default
+targetEntityType: notification_message
+bundle: global
+mode: default
+content:
+  field_headline:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_read_more_url:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  message:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

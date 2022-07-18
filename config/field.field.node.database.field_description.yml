@@ -1,0 +1,21 @@
+uuid: 63aa1fd4-2668-4130-b21f-909a50de5f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.database
+  module:
+    - text
+id: node.database.field_description
+field_name: field_description
+entity_type: node
+bundle: database
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

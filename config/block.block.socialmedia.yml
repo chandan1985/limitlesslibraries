@@ -1,0 +1,25 @@
+uuid: 2468e715-17d6-4b73-83c6-40ff517edb2a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_links:90814c5e-fa56-4abf-bd7a-fe0dd4d8c901'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: socialmedia
+theme: bartik
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:90814c5e-fa56-4abf-bd7a-fe0dd4d8c901'
+settings:
+  id: 'block_content:90814c5e-fa56-4abf-bd7a-fe0dd4d8c901'
+  label: 'Social Media'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

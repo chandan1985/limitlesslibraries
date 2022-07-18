@@ -1,0 +1,29 @@
+uuid: 482e7c05-adac-4ee7-908c-5910075274a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_database_age
+    - node.type.database
+    - taxonomy.vocabulary.audience
+id: node.database.field_database_age
+field_name: field_database_age
+entity_type: node
+bundle: database
+label: 'Age Groups'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audience: audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

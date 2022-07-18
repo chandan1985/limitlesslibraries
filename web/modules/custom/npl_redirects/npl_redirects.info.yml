@@ -1,0 +1,5 @@
+name: NPL Redirects
+description: Module to addd npl redirects information.
+core_version_requirement: ^8 || ^9
+type: module
+package: Custom Module

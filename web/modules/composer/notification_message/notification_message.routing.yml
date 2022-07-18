@@ -1,0 +1,7 @@
+notification_message.edit:
+  path: /admin/structure/notification-message
+  defaults:
+    _title: Edit notification message type
+    _form: \Drupal\notification_message\Form\NotificationMessageSettingForm
+  requirements:
+    _permission: 'administer notification message'

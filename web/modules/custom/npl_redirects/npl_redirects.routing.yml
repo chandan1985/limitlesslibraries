@@ -1,0 +1,40 @@
+npl_redirects.npl_redirects:
+  path: 'admin/structure/npl_redirects/add'
+  defaults:
+   _form: '\Drupal\npl_redirects\Form\npl_redirectsForm'
+   _title: 'NPL Redirects'
+  requirements:
+    _permission: 'access content'
+
+npl_redirects.getnpl_redirectsList:
+  path: '/admin/structure/npl_redirects'
+  defaults:
+    _controller: 'Drupal\npl_redirects\Controller\npl_redirectsController::getnpl_redirectsList'
+  requirements:
+    _permission: 'access content'  
+
+
+npl_redirects.createnpl_redirects:
+  path: '/admin/structure/edit-npl_redirects/{hash_key}'
+  defaults:
+   _form: '\Drupal\npl_redirects\Form\Editnpl_redirects'
+   _title: 'Create'
+  requirements:
+    _permission: 'access content'
+
+
+npl_redirects.deletenpl_redirects:
+  path: '/delete-npl_redirects/{hash_key}'
+  defaults:
+   _controller: 'Drupal\npl_redirects\Controller\npl_redirectsController::deletenpl_redirects'
+  requirements:
+    _permission: 'access content'  
+
+
+npl_redirects.registration:
+  path: '/admin/config/register-information'
+  defaults:
+    _form: '\Drupal\npl_redirects\Form\npl_redirectsForm'
+    _title: 'User Registration Data'
+  requirements:
+    _permission: 'access content'  

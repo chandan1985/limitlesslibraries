@@ -1,0 +1,27 @@
+uuid: 8fc139ad-1422-4245-a89b-8b3cf44604f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+id: paragraph.block.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: block
+label: 'Block Reference'
+description: 'Block must be one of the "available blocks" on the paragraph type to be added. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'views_block:databases-block_1': 'views_block:databases-block_1'
+      'views_block:databases-block_2': 'views_block:databases-block_2'
+      'views_block:databases-block_3': 'views_block:databases-block_3'
+field_type: block_field

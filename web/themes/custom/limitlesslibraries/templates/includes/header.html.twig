@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Theme override to display a single component.
+ *
+ * header area template
+ */
+#}
+
+{% if page.notification_message %}
+<div id = "notification-message">
+  <div class = "container">
+   <div class = "close-btn">
+      <img src = "{{ base_path ~ directory }}/images/close.png" alt= "close-btn" title = "Close Notification" class = "opened">
+      <img src = "{{ base_path ~ directory }}/images/info.png" alt= "close-btn" title = "Open Notification" class = "closed">
+      <span> View Services Update</span>
+    </div>
+    <div class = "msg-body"> {{ page.notification_message}} </div>
+  </div>
+</div>
+{% endif %}
+
+<header id="header">
+      {# <div id="mobile-search"></div> #}
+      <div id="mobile-menu"></div>
+  <div id="header-top" style="background: #000; overflow: hidden;">
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2">
+      <div id="primary-menu">
+            {{ page.main_navigation }}
+          </div>
+      </div>
+      <div class="col-sm-2">
+        <div id="user-account-menu">
+          <a href="https://school.library.nashville.org/MyAccount/Home?url=http%253A//appserver-91096815-nginx-af1499c39216472197bf221ef4827599/" >My Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="site-branding">
+    <div class="container">
+      {{ page.site_branding }}
+    </div>
+  </div>
+</header>

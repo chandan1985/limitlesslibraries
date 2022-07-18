@@ -1,0 +1,52 @@
+.container {
+  width: 1250px;
+  margin: auto;
+}
+header#header {
+  position: relative;
+  margin-bottom: 50px;
+}
+#site-branding {
+  a.logo.navbar-btn.pull-left {
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+}
+div#header-top {
+  padding: 30px 0;
+}
+#primary-menu {
+  .menu.menu--main {
+    li {
+      margin: 0 10px;
+      a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        &:focus {
+          outline: 0;
+          background: transparent;
+        }
+        &:hover {
+          color: #000;
+          background: #00adef;
+        }
+      }
+      a.is-active {
+        color: #000;
+        background: #00adef;
+      }
+    }
+  }
+}
+#user-account-menu {
+  margin-top: -20px;
+  text-align: right;
+  a {
+    padding: 15px 25px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+  }
+}

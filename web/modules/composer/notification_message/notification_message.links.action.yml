@@ -1,0 +1,11 @@
+notification_message.content.add_page:
+  title: Add notification message
+  route_name: entity.notification_message.add_page
+  appears_on:
+    - entity.notification_message.collection
+
+notification_message.type.add_form:
+  title: Add type
+  route_name: entity.notification_message_type.add_form
+  appears_on:
+    - entity.notification_message_type.collection

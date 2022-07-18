@@ -1,0 +1,42 @@
+uuid: 54c447ae-87f4-407d-9a55-42dcfeb66189
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_library
+  module:
+    - entity_browser_entity_form
+    - views
+name: document_library
+label: 'Document Library'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  5dc1999e-9242-4132-a2ee-20851132d501:
+    id: view
+    uuid: 5dc1999e-9242-4132-a2ee-20851132d501
+    label: 'Media Library'
+    weight: 1
+    settings:
+      submit_text: 'Select Document'
+      auto_select: false
+      view: media_library
+      view_display: entity_browser_3
+  623ec1d4-db3a-4587-b15d-cbbd87b8d630:
+    id: entity_form
+    uuid: 623ec1d4-db3a-4587-b15d-cbbd87b8d630
+    label: 'Add Document'
+    weight: 2
+    settings:
+      submit_text: 'Save Document'
+      entity_type: media
+      bundle: document
+      form_mode: default

@@ -1,0 +1,22 @@
+uuid: 71c31477-0ac9-4d4a-b5ba-2fb88ec0af90
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - limitless
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: limitless_help
+theme: limitless
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

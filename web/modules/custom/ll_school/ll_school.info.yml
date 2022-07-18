@@ -1,0 +1,5 @@
+name: LL School
+description: Module for search block of the site.
+type: module
+package: Custom Modules
+core_version_requirement: ^8 || ^9

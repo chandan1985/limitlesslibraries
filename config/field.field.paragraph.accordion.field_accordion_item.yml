@@ -1,0 +1,46 @@
+uuid: 813ee60b-6f7e-46c4-9bdb-e0cec42178c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_item
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion.field_accordion_item
+field_name: field_accordion_item
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_item: accordion_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: false
+      accordion_item:
+        weight: 8
+        enabled: true
+      block:
+        weight: 9
+        enabled: false
+      catalog_widget:
+        weight: 10
+        enabled: false
+      database_feature_list_sortable:
+        weight: 11
+        enabled: false
+      text:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

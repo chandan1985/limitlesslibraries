@@ -1,0 +1,10 @@
+uuid: 117ae1bc-6a31-406f-8185-348f4cb3ddaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.text_image
+label: 'Text -> Image'
+targetEntityType: paragraph
+cache: true

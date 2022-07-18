@@ -1,0 +1,40 @@
+uuid: 864f6490-6dda-4edf-ac49-41553530dcd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.catalog_topic_grid
+  module:
+    - link
+    - paragraphs
+id: paragraph.catalog_topic_grid.catalog_topic_grid
+label: 'Catalog Topic Grid'
+display_label: false
+name: catalog_topic_grid
+description: ''
+base_entity_type_id: paragraph
+base_bundle_type_id: catalog_topic_grid
+field_type_id: views
+field_type_config:
+  view_name: catalog_topic_grid
+  display: default
+  arguments: '[paragraph:id]'
+field_type_condition:
+  'entity_bundle:paragraph':
+    id: 'entity_bundle:paragraph'
+    negate: false
+    context_mapping:
+      paragraph: entity_extra_field.target_entity
+    bundles: {  }
+  current_theme:
+    id: current_theme
+    theme: ''
+    negate: 0
+  request_path:
+    id: request_path
+    negate: false
+    pages: ''
+field_conditions_all_pass: false
+display:
+  type: view

@@ -1,0 +1,20 @@
+notification_message.content.collection:
+  title: Notification message
+  route_name: entity.notification_message.collection
+  base_route: system.admin_content
+
+entity.notification_message.canonical:
+  route_name: entity.notification_message.canonical
+  base_route: entity.notification_message.canonical
+  title: 'View'
+
+entity.notification_message.edit_form:
+  route_name: entity.notification_message.edit_form
+  base_route: entity.notification_message.canonical
+  title: Edit
+
+entity.notification_message.delete_form:
+  route_name: entity.notification_message.delete_form
+  base_route: entity.notification_message.canonical
+  title: Delete
+  weight: 10

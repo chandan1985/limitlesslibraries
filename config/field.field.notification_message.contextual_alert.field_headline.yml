@@ -1,0 +1,21 @@
+uuid: 61be59ff-c2a0-4c47-98b8-23e7978a99ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.notification_message.field_headline
+    - notification_message.type.contextual_alert
+  module:
+    - text
+id: notification_message.contextual_alert.field_headline
+field_name: field_headline
+entity_type: notification_message
+bundle: contextual_alert
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

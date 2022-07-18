@@ -1,0 +1,10 @@
+uuid: c1d00f4a-cd65-4930-8d89-5d32e91affca
+langcode: en
+status: true
+dependencies: {  }
+id: catalog_topic_link
+label: 'Catalog Topic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

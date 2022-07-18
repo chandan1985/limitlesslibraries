@@ -1,0 +1,80 @@
+uuid: 2c4ca5cb-e10f-4883-8425-4292b626e39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.database.field__field_database_logo
+    - field.field.node.database.field_access_restrictions
+    - field.field.node.database.field_app_link
+    - field.field.node.database.field_content
+    - field.field.node.database.field_database_age
+    - field.field.node.database.field_database_topics
+    - field.field.node.database.field_database_type
+    - field.field.node.database.field_description
+    - field.field.node.database.field_help_link
+    - field.field.node.database.field_learn_more_link_text
+    - field.field.node.database.field_link
+    - node.type.database
+  module:
+    - link_url_decoder
+    - user
+id: node.database.card
+targetEntityType: node
+bundle: database
+mode: card
+content:
+  field__field_database_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_database_age:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_database_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_learn_more_link_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link_url_decoder
+    label: hidden
+    settings:
+      trim_length: ''
+      url_only: '1'
+      url_plain: '1'
+      external_url_decode: '1'
+      rel: 0
+      target: 0
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_access_restrictions: true
+  field_app_link: true
+  field_content: true
+  field_database_type: true
+  field_description: true
+  field_help_link: true
+  links: true

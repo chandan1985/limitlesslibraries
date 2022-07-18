@@ -1,0 +1,16 @@
+{% set _messages = [] %}
+
+{% for message in messages %}
+  {% if message['#notification_message'] %}
+    {% set entity = message['#notification_message'] %}
+    {% set read_more_url = not entity.field_read_more_url.isEmpty()
+      ? entity.field_read_more_url.0.url
+      : url('entity.notification_message.canonical', { 'notification_message': entity.id() })|render
+    %}
+    {% set _messages = _messages|merge([{
+      content: message|render,
+      read_more: not entity.field_read_more_url.isEmpty() ? TRUE : (not entity.message.isEmpty() ?? FALSE),
+      read_more_url: read_more_url,
+    }]) %}
+  {% endif %}
+{% endfor %}

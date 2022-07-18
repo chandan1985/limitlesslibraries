@@ -1,0 +1,15 @@
+type: module
+name: Notification Message
+description: Allow site admins to construct and broadcast notification messages.
+core: 8.x
+package: Other
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:block
+  - drupal:datetime
+  - drupal:text
+
+# Information added by Drupal.org packaging script on 2022-05-20
+version: '8.x-1.0-rc4'
+project: 'notification_message'
+datestamp: 1653019919

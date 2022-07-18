@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * @file
+ * Define the hook implementations for the notification message module.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\notification_message\Plugin\Block\NotificationMessageBlock;
+
+/**
+ * Implements hook_theme().
+ */
+function notification_message_theme($existing, $type, $theme, $path) {
+  return [
+    'notification_message' => [
+      'render element' => 'elements',
+      'path' => "{$path}/templates",
+      'file' => 'notification_message.theme',
+      'template' => 'notification-message'
+    ],
+    'notification_messages' => [
+      'render element' => 'element',
+      'path' => "{$path}/templates",
+      'file' => 'notification_message.theme',
+      'template' => 'notification-messages'
+    ]
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function notification_message_theme_suggestions_notification_message(array $variables) {
+  $suggestions = [];
+  $notification_message = $variables['elements']['#notification_message'];
+
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'notification_message__' . $sanitized_view_mode;
+  $suggestions[] = 'notification_message__' . $notification_message->bundle();
+  $suggestions[] = 'notification_message__' . $notification_message->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'notification_message__' . $notification_message->id();
+  $suggestions[] = 'notification_message__' . $notification_message->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function notification_message_theme_suggestions_notification_messages(array $variables) {
+  $suggestions = [];
+
+  $theme_hook = $variables['theme_hook_original'];
+
+  /** @var \Drupal\notification_message\Plugin\Block\NotificationMessageBlock $block */
+  if ($block = $variables['element']['#block']) {
+    if ($block instanceof NotificationMessageBlock) {
+      $types = $block->getNotificationMessageType();
+      ksort($types);
+
+      $type_string = !empty($types)
+        ? implode('_', $types)
+        : 'all';
+      $suggestions[] = "{$theme_hook}__types__{$type_string}";
+
+      if ($message_mode = $block->getNotificationMessageDisplayMode()) {
+        $suggestions[] = "{$theme_hook}__display__{$message_mode}";
+      }
+    }
+  }
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function notification_message_cron() {
+  $timestamp = \Drupal::state()->get('system.cron_last');
+  $cron_last_ran_date = DrupalDateTime::createFromTimestamp($timestamp)
+    ->format(
+      DateTimeItemInterface::DATETIME_STORAGE_FORMAT,
+      ['timezone' => 'UTC']
+    );
+  $storage = _notification_message_storage();
+  $query = $storage->getQuery();
+
+  $entity_ids = $query
+    ->condition('publish_end_date', $cron_last_ran_date, '>=')
+    ->execute();
+
+  if (empty($entity_ids)) {
+    return;
+  }
+
+  foreach ($storage->loadMultiple($entity_ids) as $entity) {
+    Cache::invalidateTags($entity->getCacheTagsToInvalidate());
+  }
+}
+
+/**
+ * Get the notification message storage instance.
+ *
+ * @return \Drupal\Core\Entity\EntityStorageInterface
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function _notification_message_storage() {
+  return \Drupal::entityTypeManager()->getStorage('notification_message');
+}

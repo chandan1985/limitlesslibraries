@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Flushes cache to force condition reevaluations and rebuild the container.
+ */
+function notification_message_update_8901(&$sandbox) {
+  drupal_flush_all_caches();
+}
+
+/**
+ * Update the notification message entity last installed definition.
+ */
+function notification_message_update_8902(&$sandbox) {
+  /** @var \Drupal\Core\Entity\EntityLastInstalledSchemaRepository $last_installed_schema_repository */
+  $last_installed_schema_repository = \Drupal::service(
+    'entity.last_installed_schema.repository'
+  );
+  /** @var \Drupal\Core\Entity\EntityTypeManager $entity_type_manager */
+  $entity_type_manager = \Drupal::service('entity_type.manager');
+
+  $last_installed_schema_repository->setLastInstalledDefinition(
+    $entity_type_manager->getDefinition('notification_message')
+  );
+}

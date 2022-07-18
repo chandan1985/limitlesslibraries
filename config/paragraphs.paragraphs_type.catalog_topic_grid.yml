@@ -1,0 +1,10 @@
+uuid: a48cfc61-870f-4853-a025-6a9ae4ae83fa
+langcode: en
+status: true
+dependencies: {  }
+id: catalog_topic_grid
+label: 'Catalog Topic Grid'
+icon_uuid: null
+icon_default: null
+description: 'Use to add a 4-column row of catalog topics (image + catalog url).'
+behavior_plugins: {  }

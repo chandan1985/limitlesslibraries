@@ -1,0 +1,45 @@
+uuid: d7525422-b194-4f56-b44c-e5040a1058fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.database.field__field_database_logo
+    - field.field.node.database.field_access_restrictions
+    - field.field.node.database.field_app_link
+    - field.field.node.database.field_content
+    - field.field.node.database.field_database_age
+    - field.field.node.database.field_database_topics
+    - field.field.node.database.field_database_type
+    - field.field.node.database.field_description
+    - field.field.node.database.field_help_link
+    - field.field.node.database.field_learn_more_link_text
+    - field.field.node.database.field_link
+    - node.type.database
+  module:
+    - text
+    - user
+id: node.database.search_index
+targetEntityType: node
+bundle: database
+mode: search_index
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field__field_database_logo: true
+  field_access_restrictions: true
+  field_app_link: true
+  field_content: true
+  field_database_age: true
+  field_database_topics: true
+  field_database_type: true
+  field_help_link: true
+  field_learn_more_link_text: true
+  field_link: true
+  links: true

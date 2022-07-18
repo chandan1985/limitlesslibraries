@@ -1,0 +1,319 @@
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.3125em;;
+  line-height: 1.90476rem;
+}
+
+* html {
+  font-size: 131.25%; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html[dir="rtl"] {
+  direction: ltr;
+
+  main {
+    direction: rtl;
+  }
+}
+
+.body-clip {
+  // NPLD8SCRUM-271: Attempt to disable horizontal scrolling
+  // on iOS devices due to width calculations of the catalog
+  // iFrame. Remove this if it causes a11y issues for zoomed
+  // in users.
+  overflow-x: hidden;
+}
+
+.main {
+  @include wrapper;
+  display: block; // Fix for IE weirdness
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+hr {
+  border: 1px solid $gray-white;
+  margin: 1em 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+#main-content {
+  &:focus {
+    outline: none;
+  }
+}
+
+main {
+  margin: 5em 0;
+
+  .header--mobile + & {
+    margin-top: 2.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      border-bottom: 0;
+
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+    font-size: 29px;
+    font-size: 1.42857rem;
+    line-height: 40px;
+    line-height: 39px;
+    line-height: 1.90476rem;
+    font-family: "akagi-pro", sans-serif;
+    line-height: 36px;
+    color: #f16530; }
+    @media (min-width: 43.75em) {
+      h1 {
+        font-size: 42px;
+        font-size: 2rem;
+        line-height: 50px;
+        line-height: 2.38095rem;
+        margin-top: 20px;
+        margin-top: 0.95238rem;
+        padding-top: 0px;
+        padding-top: 0rem;
+        padding-bottom: 0px;
+        padding-bottom: 0rem;
+        margin-bottom: 20px;
+        margin-bottom: 0.95238rem; } }
+
+  h2, .block-title, .heading--feature {
+    font-size: 27px;
+    font-size: 26px;
+    font-size: 1.28571rem;
+    line-height: 40px;
+    line-height: 39px;
+    line-height: 1.90476rem;
+    line-height: 30px;
+    font-family: "akagi-pro", sans-serif;
+    color: #f16530; }
+    @media (min-width: 43.75em) {
+      h2, .block-title, .heading--feature {
+        font-size: 36px;
+        font-size: 1.71429rem;
+        line-height: 40px;
+        line-height: 1.90476rem;
+        margin-top: 20px;
+        margin-top: 0.95238rem;
+        padding-top: 0px;
+        padding-top: 0rem;
+        padding-bottom: 0px;
+        padding-bottom: 0rem;
+        margin-bottom: 20px;
+        margin-bottom: 0.95238rem; } }
+    .content h2, .content .block-title, .content .heading--feature {
+      margin-top: 40px;
+      margin-top: 39px;
+      margin-top: 1.90476rem;
+      padding-top: 0px;
+      padding-top: 0px;
+      padding-top: 0rem;
+      padding-bottom: 0px;
+      padding-bottom: 0px;
+      padding-bottom: 0rem;
+      margin-bottom: 20px;
+      margin-bottom: 19px;
+      margin-bottom: 0.95238rem; }
+
+  h3 {
+    font-size: 24px;
+    font-size: 24px;
+    font-size: 1.14286rem;
+    line-height: 30px;
+    line-height: 29px;
+    line-height: 1.42857rem;
+    line-height: 30px;
+    font-family: "akagi-pro", sans-serif; }
+    @media (min-width: 43.75em) {
+      h3 {
+        font-size: 30px;
+        font-size: 1.42857rem;
+        line-height: 40px;
+        line-height: 1.90476rem;
+        margin-top: 20px;
+        margin-top: 0.95238rem;
+        padding-top: 0px;
+        padding-top: 0rem;
+        padding-bottom: 0px;
+        padding-bottom: 0rem;
+        margin-bottom: 20px;
+        margin-bottom: 0.95238rem; } }
+    .content h3 {
+      margin-top: 40px;
+      margin-top: 39px;
+      margin-top: 1.90476rem;
+      padding-top: 0px;
+      padding-top: 0px;
+      padding-top: 0rem;
+      padding-bottom: 0px;
+      padding-bottom: 0px;
+      padding-bottom: 0rem;
+      margin-bottom: 20px;
+      margin-bottom: 19px;
+      margin-bottom: 0.95238rem; }
+
+  h4 {
+    font-size: 18px;
+    font-size: 17px;
+    font-size: 0.85714rem;
+    line-height: 30px;
+    line-height: 29px;
+    line-height: 1.42857rem;
+    line-height: 30px;
+    font-family: "akagi-pro", sans-serif; }
+    @media (min-width: 43.75em) {
+      h4 {
+        font-size: 24px;
+        font-size: 1.14286rem;
+        line-height: 30px;
+        line-height: 1.42857rem;
+        margin-top: 40px;
+        margin-top: 1.90476rem;
+        padding-top: 0px;
+        padding-top: 0rem;
+        padding-bottom: 0px;
+        padding-bottom: 0rem;
+        margin-bottom: 0px;
+        margin-bottom: 0rem; } }
+    .content h4 {
+      margin-top: 60px;
+      margin-top: 59px;
+      margin-top: 2.85714rem;
+      padding-top: 0px;
+      padding-top: 0px;
+      padding-top: 0rem;
+      padding-bottom: 0px;
+      padding-bottom: 0px;
+      padding-bottom: 0rem;
+      margin-bottom: 20px;
+      margin-bottom: 19px;
+      margin-bottom: 0.95238rem; }
+
+  h5 {
+    font-size: 21px;
+    font-size: 21px;
+    font-size: 1rem;
+    line-height: 30px;
+    line-height: 29px;
+    line-height: 1.42857rem;
+    margin-top: 40px;
+    margin-top: 39px;
+    margin-top: 1.90476rem;
+    padding-top: 0px;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    font-family: "akagi-pro", sans-serif; }
+
+  h6 {
+    font-size: 18px;
+    font-size: 17px;
+    font-size: 0.85714rem;
+    line-height: 30px;
+    line-height: 29px;
+    line-height: 1.42857rem;
+    margin-top: 40px;
+    margin-top: 39px;
+    margin-top: 1.90476rem;
+    padding-top: 0px;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    letter-spacing: .03em;
+    text-transform: uppercase; }
+
+    a {
+      color: #2e388f;
+      text-decoration: none; }
+      a:hover {
+        color: #222968; }
+      .content a {
+        border-bottom: 1px solid rgba(46, 56, 143, 0.4);
+        transition: border 0.3s ease-in-out; }
+        .content a:hover {
+          border-bottom-color: #2e388f; }
+      .content figure a {
+        border-bottom: 0; }
+
+    p {
+      margin: 0 0 19px;
+      margin: 0 0 0.95238rem; }
+
+    blockquote {
+      margin: 19px 0 19px 3em;
+      margin: 0.95238rem 0 0.95238rem 3em;
+      font-style: italic; }
+
+    img {
+      max-width: 100%;
+      height: auto; }
+
+    dl {
+      margin-bottom: 29px;
+      margin-bottom: 1.42857rem; }
+
+    dt {
+      font-weight: bold; }
+
+    dd {
+      margin-left: 30px; }
+
+    ul,
+    ol {
+      padding-left: 29px;
+      padding-left: 1.42857rem; }
+}

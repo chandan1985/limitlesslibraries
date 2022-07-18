@@ -1,0 +1,10 @@
+uuid: 41e18374-049f-4f50-a2a9-24a960ac2883
+langcode: en
+status: true
+dependencies: {  }
+id: database_feature_list_sortable
+label: 'Database Feature List (Sortable)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

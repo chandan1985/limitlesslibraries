@@ -1,0 +1,21 @@
+uuid: da551404-d9a8-4335-94b5-3a1d3860c147
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_display_mode
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  entity_display_mode:
+    display_configuration:
+      field_name: ''
+name: School
+type: school
+description: 'Add a school to the search box drop down menu. '
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

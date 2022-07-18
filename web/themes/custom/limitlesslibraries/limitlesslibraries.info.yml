@@ -1,0 +1,27 @@
+name: Limitless Libraries
+type: theme
+description: 'A Drupal Bootstrap 3 based sub-theme.'
+base theme: bootstrap
+package: "Bootstrap"
+core_version_requirement: ^8 || ^9
+
+regions:
+  notification_message: "Notification Message"
+  site_branding: "Site Branding"
+  main_navigation: "Main Navigation"
+  user_account_menu: "User Account Menu"
+  secondary_menu: "Secondary Menu"
+  feature: "Feature"
+  content_top: "Content Top"
+  content: "Content Area"
+  content_bottom: "Content Bottom"
+  footer_top: "Footer Top"
+  footer_bottom: "Footer Bottom"
+  footer_social: "Footer Social"
+
+# libraries-extend:
+#   bootstrap/framework:
+#     - limitlesslibraries/framework
+
+libraries:
+  - limitlesslibraries/framework

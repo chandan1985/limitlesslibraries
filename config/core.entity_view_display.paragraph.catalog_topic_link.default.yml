@@ -1,0 +1,43 @@
+uuid: 37317e91-187e-4fb5-90e2-4a8784c81370
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.catalog_topic_link.field_image
+    - field.field.paragraph.catalog_topic_link.field_link
+    - field.field.paragraph.catalog_topic_link.field_title
+    - paragraphs.paragraphs_type.catalog_topic_link
+  module:
+    - link
+id: paragraph.catalog_topic_link.default
+targetEntityType: paragraph
+bundle: catalog_topic_link
+mode: default
+content:
+  catalog_topic_grid:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_title: true

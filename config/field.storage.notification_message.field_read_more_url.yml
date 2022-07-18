@@ -1,0 +1,19 @@
+uuid: f11c389d-b1dc-4d83-aee9-6374d806248a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - notification_message
+id: notification_message.field_read_more_url
+field_name: field_read_more_url
+entity_type: notification_message
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

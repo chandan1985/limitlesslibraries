@@ -1,0 +1,10 @@
+uuid: ee2307b2-62e4-4c2d-ac5d-1771684cb22e
+langcode: en
+status: true
+dependencies: {  }
+id: contextual_alert
+label: 'Contextual Alert'
+help: ''
+description: "The <em>Contextual Alert</em> should be used to show notification messages on specific pieces or types of content throughout the site.\r\n"
+allow_condition: true
+condition_datatype: {  }

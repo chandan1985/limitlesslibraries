@@ -1,0 +1,23 @@
+uuid: 1bee3cbc-5995-4994-b165-fe20072900bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_link
+    - node.type.database
+  module:
+    - link
+id: node.database.field_app_link
+field_name: field_app_link
+entity_type: node
+bundle: database
+label: 'Download the App'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

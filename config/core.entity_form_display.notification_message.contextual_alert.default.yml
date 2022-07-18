@@ -1,0 +1,40 @@
+uuid: b5792bc5-bc40-4845-879c-1d4f257b5d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.notification_message.contextual_alert.field_headline
+    - notification_message.type.contextual_alert
+  module:
+    - datetime
+    - text
+id: notification_message.contextual_alert.default
+targetEntityType: notification_message
+bundle: contextual_alert
+mode: default
+content:
+  field_headline:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  message:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

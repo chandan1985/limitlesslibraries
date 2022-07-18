@@ -1,0 +1,27 @@
+<?php
+
+  /**
+   * Class implement
+   */
+    use Drupal\Core\Form\FormStateInterface;
+
+  /**
+   * hook_form_alter().
+  */
+
+    function ll_school_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+      if ($form_id == 'll_school') {
+        //$form['#cache']['contexts'][] = 'session';
+        $form['#cache'] = ['max-age' => 0];
+        \Drupal::service('page_cache_kill_switch')->trigger();
+      }
+
+      // if (\Drupal::currentUser()->isAnonymous()) {
+      //   $form['#cache'] = ['max-age' => 0];
+      //   $form['#cache']['contexts'][] = 'session';
+      //   $form['#cache']['tags'][] = 'weather_forecast';
+      // }
+
+    }
+    

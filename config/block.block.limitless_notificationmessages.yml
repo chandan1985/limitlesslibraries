@@ -1,0 +1,24 @@
+uuid: 16e437a9-b403-4f91-84ba-a72023f4774c
+langcode: en
+status: true
+dependencies:
+  module:
+    - notification_message
+  theme:
+    - limitless
+id: limitless_notificationmessages
+theme: limitless
+region: header
+weight: -4
+provider: null
+plugin: notification_message
+settings:
+  id: notification_message
+  label: 'Notification messages'
+  label_display: visible
+  provider: notification_message
+  notification_message:
+    type:
+      global: global
+    display_mode: default
+visibility: {  }

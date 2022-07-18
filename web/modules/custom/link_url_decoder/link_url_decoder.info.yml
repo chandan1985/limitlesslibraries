@@ -1,0 +1,8 @@
+type: module
+name: Link URL Decoder
+description: Render the link URL in a decoded format.
+core_version_requirement: ^8.7.7 || ^9
+php: 7.2
+package: Field
+dependencies:
+  - drupal:link

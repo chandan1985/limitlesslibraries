@@ -1,0 +1,43 @@
+notification_message.type.*:
+  type: config_entity
+  label: Notification message type
+  mapping:
+    id:
+      type: string
+      label: Identifier
+    label:
+      type: label
+      label: Label
+    help:
+      type: text
+      label: Help Description
+    description:
+      type: text
+      label: Description
+    allow_condition:
+      type: boolean
+      label: Allow condition
+    condition_datatype:
+      type: sequence
+      label: Condition data types
+      sequence:
+        type: string
+        label: Data type
+
+block.settings.notification_message:
+  type: block_settings
+  label: 'Notification message block settings'
+  mapping:
+    notification_message:
+      type: mapping
+      label: 'Notification message block settings'
+      mapping:
+        type:
+          type: sequence
+          label: 'Notification message types'
+          sequence:
+            - type: string
+              label: 'Notification message type'
+        display_mode:
+          type: string
+          label: 'Display mode'

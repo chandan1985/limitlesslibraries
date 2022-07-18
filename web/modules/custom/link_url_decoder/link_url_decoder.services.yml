@@ -1,0 +1,4 @@
+services:
+  link_url_decoder.unrouted_url_assembler:
+    class: Drupal\link_url_decoder\Utility\UnroutedUrlDecoderAssembler
+    arguments: ['@request_stack', '@path_processor_manager', '%filter_protocols%']

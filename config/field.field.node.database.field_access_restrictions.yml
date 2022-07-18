@@ -1,0 +1,21 @@
+uuid: 61b5c265-c31c-4fa7-b2af-085c810ccd9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_restrictions
+    - node.type.database
+  module:
+    - text
+id: node.database.field_access_restrictions
+field_name: field_access_restrictions
+entity_type: node
+bundle: database
+label: Access/Restrictions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

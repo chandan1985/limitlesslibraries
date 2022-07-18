@@ -1,0 +1,117 @@
+uuid: 53989a19-e12a-49c4-94cc-51ef09af5b00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.database.field__field_database_logo
+    - field.field.node.database.field_access_restrictions
+    - field.field.node.database.field_app_link
+    - field.field.node.database.field_content
+    - field.field.node.database.field_database_age
+    - field.field.node.database.field_database_topics
+    - field.field.node.database.field_database_type
+    - field.field.node.database.field_description
+    - field.field.node.database.field_help_link
+    - field.field.node.database.field_learn_more_link_text
+    - field.field.node.database.field_link
+    - node.type.database
+  module:
+    - entity_reference_revisions
+    - link
+    - link_url_decoder
+    - text
+    - user
+id: node.database.default
+targetEntityType: node
+bundle: database
+mode: default
+content:
+  field__field_database_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_access_restrictions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_app_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_database_age:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_database_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_help_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_link:
+    type: link_url_decoder
+    label: hidden
+    settings:
+      trim_length: ''
+      url_only: '1'
+      url_plain: '1'
+      external_url_decode: '1'
+      rel: 0
+      target: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_database_type: true
+  field_learn_more_link_text: true
+  links: true

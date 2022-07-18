@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Define theme functions for the notification message module.
+ */
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Define the template preprocess for the notification messages.
+ *
+ * @param $variables
+ *   An array of template variables.
+ */
+function template_preprocess_notification_message(&$variables) {
+  $elements = $variables['elements'];
+  $variables['message'] = $elements['#notification_message'];
+  $variables['view_mode'] = $elements['#view_mode'];
+  $variables['bundle'] = $elements['#notification_message']->bundle();
+
+  // Helpful $content variable for templates.
+  $variables += ['content' => []];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Define the template preprocess for the notification messages.
+ *
+ * @param $variables
+ *   An array of template variables.
+ */
+function template_preprocess_notification_messages(&$variables) {
+  $element = $variables['element'];
+  $messages = $element['#messages'] ?? [];
+
+  $variables['count'] = count($messages);
+  $variables['messages'] = $messages;
+}

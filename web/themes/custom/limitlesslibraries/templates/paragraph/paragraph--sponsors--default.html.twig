@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'paragraph-id--' ~ paragraph.id(),
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ]
+%}
+
+{% block paragraph %}
+	<div {{attributes.addClass(classes)}}>
+		<div class= "Sponsors-box">
+			{% set ImareUrl = file_url(paragraph.field_sponsor_s_image.entity.uri.value) %}
+			{% set cta_link =  content.field_sponsors_link[0]['#url'] %}
+      <div class="sponsors-image">
+        <a href="{{cta_link}}">
+          <img src="{{ImareUrl}}" alt="sponsor's image">
+        </a>
+      </div>
+		</div>
+	</div>
+{% endblock paragraph %}

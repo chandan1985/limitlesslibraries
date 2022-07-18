@@ -1,0 +1,27 @@
+uuid: d47594ba-053d-4375-a955-e07531c3b4b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.notification_message.global.field_headline
+    - field.field.notification_message.global.field_read_more_url
+    - notification_message.type.global
+  module:
+    - text
+id: notification_message.global.default
+targetEntityType: notification_message
+bundle: global
+mode: default
+content:
+  message:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_headline: true
+  field_read_more_url: true
+  label: true
+  uid: true
